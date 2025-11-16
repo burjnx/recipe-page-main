@@ -107,6 +107,7 @@ table {
 
 header {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: var(--header-gap);
 }
@@ -186,4 +187,26 @@ table tbody tr:nth-child(4) td {
 table td:nth-child(2) {
   font-weight: 600;
   color: var(--section-header);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .container {
+    padding: 0;
+  }
+  .recipe-info {
+    width: 80%;
+  }
+  section {
+    margin: 0 2rem;
+  }
+  .prep-time {
+    width: 80%;
+  }
+  .nutrition {
+    padding-bottom: 2.5rem;
+  }
 }
