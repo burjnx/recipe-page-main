@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--list-gap);
+  margin-left: 1.5rem;
+  color: var(--text-color);
+}
+
+li::marker {
+  color: var(--section-header);
+}
+
+li,
+td {
+  padding-left: 1rem;
+}
+
+:root {
+  /* colors */
+  --white: hsl(0, 0%, 100%);
+  --background-color: #f3e5d7;
+  --header-text-color: #312e2c;
+  --text-color: #5f564d;
+  --prep-time-color: #7a284e;
+  --section-header: #854632;
+  --prep-background: #fff7fb;
+
+  /* font-size */
+  --fs-large: clamp(2.25rem, 1.5rem + 1.333vw, 2.5rem);
+  --fs-small: 1rem;
+  --fs-medium: 1.75rem;
+  --perp-size: 1.25rem;
+
+  /* spacing */
+  --container-padding: 2.5rem;
+  --container-gap: 2rem;
+  --header-gap: 2.5rem;
+  --title-gap: 2rem;
+  --list-gap: 0.5rem;
+  --body-padding: 8rem;
+}
+
+span {
+  font-weight: 700;
+  margin-inline-end: 0.2rem;
+  font-size: var(--fs-small);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: var(--body-padding) 0;
+  line-height: 1.5;
+}
+h1 {
+  font-family: "Young Serif", serif;
+  font-size: var(--fs-large);
+  color: var(--header-text-color);
+  font-weight: 500;
+}
+
+h2 {
+  font-family: "Young Serif", serif;
+  font-size: var(--fs-medium);
+  color: var(--section-header);
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--perp-size);
+  color: var(--prep-time-color);
+  font-weight: 600;
+}
+
+p,
+table {
+  font-size: var(--fs-small);
+  color: var(--text-color);
+}
+
+.container {
+  width: 100%;
+  max-width: clamp(616px, 90%, 736px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: var(--white);
+  border-radius: 24px;
+  padding: var(--container-padding);
+  gap: var(--container-gap);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--header-gap);
+}
+
+.recipe-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-bottom: 1px solid #e3ddd7;
+}
+
+.ingredients,
+.instructions {
+  padding-block-end: 2rem;
+}
+
+.prep-time {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--prep-background);
+  border-radius: 12px;
+  padding: 1.5rem;
+  gap: 1rem;
+  border: 0;
+}
+
+.instructions ol li::marker {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.nutrition {
+  border: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table tbody tr:nth-child(2) td,
+table tbody tr:nth-child(3) td,
+table tbody tr:nth-child(4) td {
+  padding-block-start: 0.75rem;
+}
+
+td {
+  text-align: start;
+  padding-block-end: 0.75rem;
+  border-bottom: 1px solid #e3ddd7;
+}
+
+table tbody tr:nth-child(4) td {
+  padding-block-end: 0;
+}
+
+table td:nth-child(2) {
+  font-weight: 600;
+  color: var(--section-header);
+}
